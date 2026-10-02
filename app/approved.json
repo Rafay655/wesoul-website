@@ -1,0 +1,402 @@
+{
+  "about": {
+    "title": "About WESOUL | Give Ideas a Soul",
+    "description": "Learn how WESOUL evolved from digital work into software, product engineering, connected systems and practical AI — while keeping the same idea-first philosophy.",
+    "sections": [
+      {
+        "label": "Hero",
+        "lines": [
+          "THE IDEA STAYED. WE GREW INTO IT.",
+          "WESOUL began by helping ideas find their first digital form.",
+          "Then the work changed.",
+          "Websites became applications. Applications became products. Products became systems that had to connect, scale and keep evolving.",
+          "So we evolved too."
+        ]
+      },
+      {
+        "label": "Evolution",
+        "lines": [
+          "Web → Applications → Products → Connected Systems → AI-enabled Systems"
+        ]
+      },
+      {
+        "label": "What Hasn’t Changed",
+        "lines": [
+          "UNDERSTAND THE IDEA. GIVE IT PURPOSE. BRING IT TO LIFE.",
+          "The technologies changed. The principle did not. We start by understanding what the business is trying to achieve, then determine what deserves to be built."
+        ]
+      },
+      {
+        "label": "Business Before Technology",
+        "lines": [
+          "PROBLEM FIRST. TECHNOLOGY SECOND.",
+          "We do not force every problem into the same solution. Sometimes the right answer is new software. Sometimes it is an integration. Sometimes the existing system simply needs to evolve."
+        ]
+      },
+      {
+        "label": "Product Company Mindset",
+        "lines": [
+          "WE BUILD OUR OWN PRODUCTS TOO.",
+          "Product ownership keeps us close to the realities of software beyond delivery: usability, releases, reliability, support, adoption and continuous improvement.",
+          "CTA: Explore WESOUL Products"
+        ]
+      },
+      {
+        "label": "How We Work",
+        "lines": [
+          "Understand before prescribing.",
+          "Build for real use.",
+          "Stay accountable after launch."
+        ]
+      },
+      {
+        "label": "Final CTA",
+        "lines": [
+          "HAVE SOMETHING WORTH BRINGING TO LIFE?",
+          "CTA: Talk to WESOUL"
+        ]
+      }
+    ]
+  },
+  "services": {
+    "title": "Software & Technology Services | WESOUL",
+    "description": "Explore WESOUL services across software and product engineering, AI agents and automation, system modernization, integrations and engineering augmentation.",
+    "sections": [
+      {
+        "label": "Hero",
+        "lines": [
+          "TECHNOLOGY BUILT AROUND THE BUSINESS.",
+          "From new software products to AI-enabled workflows and modernization of existing platforms, WESOUL helps businesses build what they need next."
+        ]
+      },
+      {
+        "label": "Software & Product Engineering",
+        "lines": [
+          "Custom software, digital products, web applications and mobile applications designed around real workflows and users.",
+          "Custom software",
+          "Product development",
+          "Web applications",
+          "Mobile applications",
+          "Product architecture",
+          "UX/UI",
+          "CTA: Explore Software & Product Engineering"
+        ]
+      },
+      {
+        "label": "AI Engineering, Agents & Automation",
+        "lines": [
+          "Practical AI systems that can understand, retrieve, interact and take permitted action.",
+          "AI applications",
+          "AI agents",
+          "Chatbots",
+          "Copilots",
+          "Agentic workflows",
+          "Knowledge systems",
+          "Document intelligence",
+          "AI integration",
+          "CTA: Explore AI Engineering"
+        ]
+      },
+      {
+        "label": "Architecture, Integration & Modernization",
+        "lines": [
+          "Evolve existing systems, connect applications and create the architecture for what comes next.",
+          "Solution architecture",
+          "APIs",
+          "System integration",
+          "Legacy modernization",
+          "Data flows",
+          "Cloud architecture",
+          "AI enablement",
+          "CTA: Explore Modernization"
+        ]
+      },
+      {
+        "label": "Engineering Augmentation",
+        "lines": [
+          "Add specialist product and engineering capability to an existing team without replacing it.",
+          "Frontend",
+          "Backend",
+          "Mobile",
+          "Architecture",
+          "AI engineering",
+          "Technical consulting",
+          "Integration specialists",
+          "CTA: Explore Engineering Augmentation"
+        ]
+      },
+      {
+        "label": "Problem-first CTA",
+        "lines": [
+          "NOT SURE WHICH CATEGORY YOUR PROBLEM BELONGS TO?",
+          "Good. Start with the problem. We can work out the technology from there.",
+          "CTA: Talk to Us"
+        ]
+      }
+    ]
+  },
+  "software-product-engineering": {
+    "title": "Software & Product Engineering | WESOUL",
+    "description": "WESOUL designs and builds custom software, web applications, mobile apps and digital products around business workflows, users and measurable outcomes.",
+    "sections": [
+      {
+        "label": "Hero",
+        "lines": [
+          "FROM AN IDEA TO A PRODUCT THAT WORKS.",
+          "Not every business problem has an off-the-shelf answer.",
+          "We design and engineer software around the workflows, users and business outcomes that make the problem unique."
+        ]
+      },
+      {
+        "label": "What We Build",
+        "lines": [
+          "Custom Software",
+          "Web Applications",
+          "Mobile Applications",
+          "Business Applications",
+          "Digital Products",
+          "Internal Platforms"
+        ]
+      },
+      {
+        "label": "When Custom Software Makes Sense",
+        "lines": [
+          "WHEN SHOULD A BUSINESS BUILD CUSTOM SOFTWARE?",
+          "Custom software makes sense when the workflow, product opportunity or operating model cannot be supported effectively by standard software without excessive compromise.",
+          "Existing software cannot support the workflow.",
+          "Multiple systems create duplicated work.",
+          "A new digital product is being created.",
+          "Existing software has become restrictive.",
+          "Business differentiation depends on the process."
+        ]
+      },
+      {
+        "label": "Web Applications",
+        "lines": [
+          "SOFTWARE THAT WORKS WHERE BUSINESS HAPPENS.",
+          "We design web applications for dashboards, portals, internal operations, customer services, workflows and connected business platforms."
+        ]
+      },
+      {
+        "label": "Mobile Applications",
+        "lines": [
+          "TECHNOLOGY THAT GOES WHERE YOUR PEOPLE DO.",
+          "Work does not just happen at a desk. We build mobile applications for customers, employees, partners and field teams — connected to the business systems they depend on.",
+          "Customer apps",
+          "Employee apps",
+          "Field-force applications",
+          "Partner applications",
+          "Operational mobile systems"
+        ]
+      },
+      {
+        "label": "How We Build",
+        "lines": [
+          "Understand → Define → Design → Architect → Build → Validate → Deploy → Learn & Evolve"
+        ]
+      },
+      {
+        "label": "Engineering Quality",
+        "lines": [
+          "We consider security, permissions, testing, maintainability, environments and deployment discipline from the start — not as cleanup after the build."
+        ]
+      },
+      {
+        "label": "Final CTA",
+        "lines": [
+          "HAVE AN IDEA, WORKFLOW OR PRODUCT TO BUILD?",
+          "CTA: Discuss Your Product"
+        ]
+      }
+    ]
+  },
+  "ai-engineering": {
+    "title": "AI Engineering, AI Agents & Automation | WESOUL",
+    "description": "WESOUL builds AI agents, copilots, chatbots, knowledge systems, document intelligence and agentic workflows connected to real business systems and processes.",
+    "sections": [
+      {
+        "label": "Hero",
+        "lines": [
+          "AI IS USEFUL WHEN IT CAN ACTUALLY DO SOMETHING.",
+          "WESOUL designs AI-powered software, agents, copilots and intelligent workflows that connect AI with the information, tools and processes businesses already use."
+        ]
+      },
+      {
+        "label": "From Questions to Actions",
+        "lines": [
+          "User Request → Understand Context → Access Knowledge → Use Business Systems → Take Approved Action → Deliver Outcome"
+        ]
+      },
+      {
+        "label": "What We Build",
+        "lines": [
+          "AI Chatbots — Conversational experiences grounded in business information.",
+          "AI Copilots — Assist teams inside the tools and workflows they already use.",
+          "AI Agents — Understand requests, use permitted tools and carry out defined tasks.",
+          "Agentic Workflows — Coordinate intelligent steps across applications, APIs and people.",
+          "Knowledge Systems — Controlled access to organizational information through natural language.",
+          "Document Intelligence — Extract, classify and structure information from documents.",
+          "AI-enabled Applications — AI capabilities embedded into software products.",
+          "AI Integration & Automation — Connect AI with existing business systems and processes."
+        ]
+      },
+      {
+        "label": "What Is an AI Agent?",
+        "lines": [
+          "An AI agent is a software system that can interpret a request, reason over available information, use permitted tools or applications, and perform defined actions toward an outcome. In business environments, agents should operate within clear permissions, controls and approval boundaries.",
+          "Retrieve data",
+          "Read documents",
+          "Call APIs",
+          "Interact with systems",
+          "Initiate workflows",
+          "Generate structured outputs",
+          "Request human approval",
+          "Complete approved actions"
+        ]
+      },
+      {
+        "label": "Chatbot vs Copilot vs Agent vs Agentic Workflow",
+        "lines": [
+          "Chatbot — primarily converses and answers.",
+          "Copilot — assists a person inside a workflow.",
+          "Agent — can use tools and perform defined actions.",
+          "Agentic workflow — coordinates multiple intelligent steps toward a broader outcome."
+        ]
+      },
+      {
+        "label": "AI + Existing Systems",
+        "lines": [
+          "ERP / CRM / HRMS / DMS / Internal APIs / Databases → WESOUL AI Layer → Employees / Customers / Managers"
+        ]
+      },
+      {
+        "label": "Responsible AI Engineering",
+        "lines": [
+          "Permissions",
+          "Human approval",
+          "Auditability",
+          "Data boundaries",
+          "System controls",
+          "Defined responsibilities"
+        ]
+      },
+      {
+        "label": "Final CTA",
+        "lines": [
+          "WHERE COULD AI REMOVE WORK FROM YOUR BUSINESS?",
+          "CTA: Discuss an AI Use Case"
+        ]
+      }
+    ]
+  },
+  "software-modernization": {
+    "title": "Software Modernization, Integration & Architecture | WESOUL",
+    "description": "Modernize legacy software, connect business systems, build APIs and create scalable architecture without unnecessarily replacing what already works.",
+    "sections": [
+      {
+        "label": "Hero",
+        "lines": [
+          "MOVE FROM WHAT EXISTS TO WHAT’S NEXT.",
+          "Many businesses rely on technology that still works — but was built for a different time.",
+          "WESOUL helps organizations evolve those systems without unnecessarily discarding everything that already works."
+        ]
+      },
+      {
+        "label": "Capabilities",
+        "lines": [
+          "Solution Architecture",
+          "System Integration",
+          "APIs",
+          "Application Modernization",
+          "Cloud Architecture",
+          "Data Integration",
+          "Mobile Enablement",
+          "AI Enablement"
+        ]
+      },
+      {
+        "label": "You May Not Need a Replacement",
+        "lines": [
+          "The system works but does not integrate.",
+          "The application is becoming difficult to maintain.",
+          "Mobile users cannot access it effectively.",
+          "Teams move information manually between systems.",
+          "AI cannot access data locked inside the application."
+        ]
+      },
+      {
+        "label": "Architecture View",
+        "lines": [
+          "Existing Systems — ERP / HRMS / CRM / Databases / Legacy Applications",
+          "↓",
+          "Integration & API Layer",
+          "↓",
+          "Web / Mobile / AI / Analytics / Partner Systems"
+        ]
+      },
+      {
+        "label": "Modernization Principle",
+        "lines": [
+          "KEEP WHAT WORKS. BUILD WHAT’S NEXT.",
+          "Modernization should create a stronger technology foundation while protecting useful systems, processes and business knowledge."
+        ]
+      },
+      {
+        "label": "Final CTA",
+        "lines": [
+          "CTA: Discuss Your Existing System"
+        ]
+      }
+    ]
+  },
+  "engineering-augmentation": {
+    "title": "Engineering Augmentation Services | WESOUL",
+    "description": "Extend your engineering team with WESOUL frontend, backend, mobile, architecture, integration and AI engineering capability.",
+    "sections": [
+      {
+        "label": "Hero",
+        "lines": [
+          "SOMETIMES YOU DON’T NEED ANOTHER VENDOR.",
+          "YOU NEED MORE CAPABILITY.",
+          "Your product may already exist. Your development team may already be working. What you sometimes need is additional engineering capacity, specialist expertise or product thinking at the point where it matters."
+        ]
+      },
+      {
+        "label": "How It Works",
+        "lines": [
+          "WESOUL engineers work alongside existing client teams when additional capability or specialist expertise is needed — without replacing the team or taking unnecessary control of the product."
+        ]
+      },
+      {
+        "label": "Capabilities",
+        "lines": [
+          "Frontend Engineering",
+          "Backend Engineering",
+          "Mobile Development",
+          "Product Engineering",
+          "Architecture",
+          "AI Engineering",
+          "Integrations & APIs",
+          "Technical Consulting"
+        ]
+      },
+      {
+        "label": "Engagement Types",
+        "lines": [
+          "Short-term sprint",
+          "Defined project",
+          "Specialist requirement",
+          "Ongoing augmentation"
+        ]
+      },
+      {
+        "label": "Closing Position",
+        "lines": [
+          "YOUR TEAM STAYS YOUR TEAM.",
+          "WE MAKE IT STRONGER WHERE IT NEEDS TO BE.",
+          "CTA: Discuss Team Requirements"
+        ]
+      }
+    ]
+  }
+}
