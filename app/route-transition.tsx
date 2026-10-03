@@ -65,7 +65,7 @@ export function RouteTransitionProvider({ children }: { children: ReactNode }) {
     route.current = key;
     if (!active.current) return;
     clearTimers();
-    const remaining = Math.max(0, (reduced.current ? 200 : 1600) - (performance.now() - started.current));
+    const remaining = Math.max(0, (reduced.current ? 200 : 3500) - (performance.now() - started.current));
     timers.current.push(setTimeout(() => {
       setScene(value => ({ ...value, phase: 'reveal' }));
       timers.current.push(setTimeout(dismiss, reduced.current ? 120 : 280));

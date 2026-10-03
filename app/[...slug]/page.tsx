@@ -1,3 +1,4 @@
+import { SoftwareVisual, AgentVisual, ModernizationVisual, TeamVisual, EvolutionVisual, InsightCover } from "../service-visuals";
 import { PolicyPage } from "../policies";
 import Link from "../route-transition";
 import { notFound } from "next/navigation";
@@ -386,6 +387,8 @@ function StandardPage({ path }: { path: string }) {
           <ArrowUpRight size={17} />
         </Link>
       </PageHero>
+      {path === "software-product-engineering" && <SoftwareVisual />}
+      {path === "engineering-augmentation" && <TeamVisual />}
       {path === "services" ? (
         <section className="section hub-grid service-hub">
           <h2 className="sr-only">Our core services</h2><ServiceCards />
@@ -415,7 +418,7 @@ function StandardPage({ path }: { path: string }) {
       ) : (
         page.sections
           .slice(1, -1)
-          .map((section, i) => (
+          .map((section, i) => path === "about" && section.label === "Evolution" ? <EvolutionVisual key={section.label}/> : path === "ai-engineering" && section.label === "AI + Existing Systems" ? <AgentVisual key={section.label}/> : path === "software-modernization" && section.label === "Architecture View" ? <ModernizationVisual key={section.label}/> : (
             <ApprovedSection
               key={section.label}
               section={section}
@@ -462,8 +465,8 @@ function StandardPage({ path }: { path: string }) {
               path === "ai-engineering"
                 ? [
                     {
-                      q: "What is an AI agent?",
-                      a: "An AI agent is a software system that can interpret a request, reason over available information, use permitted tools or applications, and perform defined actions toward an outcome. In business environments, agents should operate within clear permissions, controls and approval boundaries.",
+                      q: "When should a business use an AI agent instead of conventional automation?",
+                      a: "Use conventional automation when inputs and rules are predictable. Consider an AI agent when the work requires interpreting variable requests, finding context or choosing among permitted actions. Start with a bounded workflow, define approval points and evaluate reliability before expanding its responsibilities.",
                     },
                   ]
                 : path === "software-modernization"
@@ -667,12 +670,11 @@ function InsightsPage() {
           {articles.map((a, i) => (
             <article className="insight-card" key={a.slug}>
               <Link
-                className={"insight-art art-" + i}
+                className="insight-cover-link"
                 href={"/insights/" + a.slug}
                 aria-label={"Read " + a.title}
               >
-                <span aria-hidden="true">{["✳", "↗", "↔"][i]}</span>
-                <small>W / THINKING {String(i + 1).padStart(2, "0")}</small>
+                <InsightCover title={a.title} category={a.category} index={i}/>
               </Link>
               <p className="eyebrow">{a.category}</p>
               <h2>
@@ -710,6 +712,7 @@ function ArticlePage({ article: a }: { article: (typeof articles)[number] }) {
             By WESOUL · <time dateTime="2026-10-02">October 2, 2026</time>
           </p>
         </PageHero>
+        <div className="article-editorial-cover"><InsightCover title={a.title} category={a.category} index={articles.indexOf(a)}/></div>
         <div className="article-layout">
           <aside className="article-toc">
             <p>IN THIS INSIGHT</p>
@@ -770,7 +773,7 @@ function ArticlePage({ article: a }: { article: (typeof articles)[number] }) {
           },
           publisher: { "@id": siteUrl + "/#organization" },
           mainEntityOfPage: siteUrl + "/insights/" + a.slug,
-          image: siteUrl + "/social/insights.png",
+          image: siteUrl + "/social/insights-" + a.slug + ".png",
         }}
       />
     </>
