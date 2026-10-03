@@ -1,2 +1,7 @@
 .next/
 node_modules/
+# Old static exports and local configuration
+out/
+.env*
+!.env.example
+assets/print/

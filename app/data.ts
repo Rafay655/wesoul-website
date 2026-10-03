@@ -1,6 +1,6 @@
 import approved from './approved.json';
 
-export const siteUrl = 'https://www.wesoul.net';
+export { siteUrl } from './site-config';
 export const buildSteps = ['Understand', 'Define', 'Design', 'Architect', 'Build', 'Validate', 'Deploy', 'Learn & Evolve'];
 export const servicePages = approved;
 export const services = [

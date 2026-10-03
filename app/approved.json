@@ -6,12 +6,12 @@
       {
         "label": "Hero",
         "lines": [
-          "THE IDEA STAYED. WE GREW INTO IT.",
           "WESOUL began by helping ideas find their first digital form.",
           "Then the work changed.",
           "Websites became applications. Applications became products. Products became systems that had to connect, scale and keep evolving.",
           "So we evolved too."
-        ]
+        ],
+        "heading": "The idea stayed. We grew into it."
       },
       {
         "label": "Evolution",
@@ -22,24 +22,24 @@
       {
         "label": "What Hasn’t Changed",
         "lines": [
-          "UNDERSTAND THE IDEA. GIVE IT PURPOSE. BRING IT TO LIFE.",
           "The technologies changed. The principle did not. We start by understanding what the business is trying to achieve, then determine what deserves to be built."
-        ]
+        ],
+        "heading": "Understand the idea. Give it purpose. Bring it to life."
       },
       {
         "label": "Business Before Technology",
         "lines": [
-          "PROBLEM FIRST. TECHNOLOGY SECOND.",
           "We do not force every problem into the same solution. Sometimes the right answer is new software. Sometimes it is an integration. Sometimes the existing system simply needs to evolve."
-        ]
+        ],
+        "heading": "Problem first. Technology second."
       },
       {
         "label": "Product Company Mindset",
         "lines": [
-          "WE BUILD OUR OWN PRODUCTS TOO.",
           "Product ownership keeps us close to the realities of software beyond delivery: usability, releases, reliability, support, adoption and continuous improvement.",
           "CTA: Explore WESOUL Products"
-        ]
+        ],
+        "heading": "We build our own products too."
       },
       {
         "label": "How We Work",
@@ -52,9 +52,9 @@
       {
         "label": "Final CTA",
         "lines": [
-          "HAVE SOMETHING WORTH BRINGING TO LIFE?",
           "CTA: Talk to WESOUL"
-        ]
+        ],
+        "heading": "Have something worth bringing to life?"
       }
     ]
   },
@@ -65,9 +65,9 @@
       {
         "label": "Hero",
         "lines": [
-          "TECHNOLOGY BUILT AROUND THE BUSINESS.",
           "From new software products to AI-enabled workflows and modernization of existing platforms, WESOUL helps businesses build what they need next."
-        ]
+        ],
+        "heading": "Technology built around the business."
       },
       {
         "label": "Software & Product Engineering",
@@ -128,10 +128,10 @@
       {
         "label": "Problem-first CTA",
         "lines": [
-          "NOT SURE WHICH CATEGORY YOUR PROBLEM BELONGS TO?",
           "Good. Start with the problem. We can work out the technology from there.",
           "CTA: Talk to Us"
-        ]
+        ],
+        "heading": "Not sure which category your problem belongs to?"
       }
     ]
   },
@@ -142,10 +142,10 @@
       {
         "label": "Hero",
         "lines": [
-          "FROM AN IDEA TO A PRODUCT THAT WORKS.",
           "Not every business problem has an off-the-shelf answer.",
           "We design and engineer software around the workflows, users and business outcomes that make the problem unique."
-        ]
+        ],
+        "heading": "From an idea to a product that works."
       },
       {
         "label": "What We Build",
@@ -161,33 +161,33 @@
       {
         "label": "When Custom Software Makes Sense",
         "lines": [
-          "WHEN SHOULD A BUSINESS BUILD CUSTOM SOFTWARE?",
           "Custom software makes sense when the workflow, product opportunity or operating model cannot be supported effectively by standard software without excessive compromise.",
           "Existing software cannot support the workflow.",
           "Multiple systems create duplicated work.",
           "A new digital product is being created.",
           "Existing software has become restrictive.",
           "Business differentiation depends on the process."
-        ]
+        ],
+        "heading": "When should a business build custom software?"
       },
       {
         "label": "Web Applications",
         "lines": [
-          "SOFTWARE THAT WORKS WHERE BUSINESS HAPPENS.",
           "We design web applications for dashboards, portals, internal operations, customer services, workflows and connected business platforms."
-        ]
+        ],
+        "heading": "Software that works where business happens."
       },
       {
         "label": "Mobile Applications",
         "lines": [
-          "TECHNOLOGY THAT GOES WHERE YOUR PEOPLE DO.",
           "Work does not just happen at a desk. We build mobile applications for customers, employees, partners and field teams — connected to the business systems they depend on.",
           "Customer apps",
           "Employee apps",
           "Field-force applications",
           "Partner applications",
           "Operational mobile systems"
-        ]
+        ],
+        "heading": "Technology that goes where your people do."
       },
       {
         "label": "How We Build",
@@ -204,9 +204,9 @@
       {
         "label": "Final CTA",
         "lines": [
-          "HAVE AN IDEA, WORKFLOW OR PRODUCT TO BUILD?",
           "CTA: Discuss Your Product"
-        ]
+        ],
+        "heading": "Have an idea, workflow or product to build?"
       }
     ]
   },
@@ -217,9 +217,9 @@
       {
         "label": "Hero",
         "lines": [
-          "AI IS USEFUL WHEN IT CAN ACTUALLY DO SOMETHING.",
           "WESOUL designs AI-powered software, agents, copilots and intelligent workflows that connect AI with the information, tools and processes businesses already use."
-        ]
+        ],
+        "heading": "AI is useful when it can actually do something."
       },
       {
         "label": "From Questions to Actions",
@@ -283,9 +283,9 @@
       {
         "label": "Final CTA",
         "lines": [
-          "WHERE COULD AI REMOVE WORK FROM YOUR BUSINESS?",
           "CTA: Discuss an AI Use Case"
-        ]
+        ],
+        "heading": "Where could AI remove work from your business?"
       }
     ]
   },
@@ -296,10 +296,10 @@
       {
         "label": "Hero",
         "lines": [
-          "MOVE FROM WHAT EXISTS TO WHAT’S NEXT.",
           "Many businesses rely on technology that still works — but was built for a different time.",
           "WESOUL helps organizations evolve those systems without unnecessarily discarding everything that already works."
-        ]
+        ],
+        "heading": "Move from what exists to what’s next."
       },
       {
         "label": "Capabilities",
@@ -337,9 +337,9 @@
       {
         "label": "Modernization Principle",
         "lines": [
-          "KEEP WHAT WORKS. BUILD WHAT’S NEXT.",
           "Modernization should create a stronger technology foundation while protecting useful systems, processes and business knowledge."
-        ]
+        ],
+        "heading": "Keep what works. Build what’s next."
       },
       {
         "label": "Final CTA",
@@ -356,10 +356,9 @@
       {
         "label": "Hero",
         "lines": [
-          "SOMETIMES YOU DON’T NEED ANOTHER VENDOR.",
-          "YOU NEED MORE CAPABILITY.",
           "Your product may already exist. Your development team may already be working. What you sometimes need is additional engineering capacity, specialist expertise or product thinking at the point where it matters."
-        ]
+        ],
+        "heading": "Sometimes you don’t need another vendor. You need more capability."
       },
       {
         "label": "How It Works",
@@ -392,10 +391,9 @@
       {
         "label": "Closing Position",
         "lines": [
-          "YOUR TEAM STAYS YOUR TEAM.",
-          "WE MAKE IT STRONGER WHERE IT NEEDS TO BE.",
           "CTA: Discuss Team Requirements"
-        ]
+        ],
+        "heading": "Your team stays your team. We make it stronger where it needs to be."
       }
     ]
   }

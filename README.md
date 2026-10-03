@@ -1,44 +1,44 @@
 # WESOUL website
 
-Next.js App Router + TypeScript, updated against `WESOUL_Website_Developer_Brief_v2.docx`. The original orange/black visual direction and corporate-profile artwork are retained.
+Next.js App Router + TypeScript. The approved visual design and page hierarchy are preserved.
 
-## Run locally
+## Local development
 
-```sh
-pnpm install
-pnpm dev
-```
+Run `npm run dev` from `D:\wesoul\website` and open the localhost URL printed by Next.js. The existing pnpm lockfile is the dependency source of truth; use `pnpm install --frozen-lockfile` when installing dependencies.
 
-Open the local URL printed by Next.js. With Node.js 20.9+ available, the existing `start-website.cmd` also launches the site on this computer. `pnpm-lock.yaml` remains the canonical lockfile.
+`npm run build` validates and builds the site. `npm start` runs the built Next.js application locally. The site now uses the Next.js runtime for responsive image optimization, security headers and redirects. **Old files in `out/` are stale and must not be used.** No deployment has been performed.
 
-## Verify and build
+## Contact behavior
 
-```sh
-pnpm typecheck
-pnpm build
-```
+As explicitly requested, a valid submission logs `{ name, company, email, phone, service, message }` with the label `WESOUL enquiry form submission` in the browser console, then shows a centered, dismissible toast for six seconds. Nothing is sent or stored by a backend. Required fields and email format are checked; invalid input remains in the form. Valid submissions reset the form. Product/service enquiry links prefill the message.
 
-The build generates the static website in `out/`. No hosting or deployment is required for development.
+This intentionally leaves the production enquiry backend deferred. The visible notice, toast and privacy policy accurately describe console-only behavior. No mail credentials or rate-limiter service are configured.
 
-## Structure
+## Route preloader
 
-- `app/page.tsx`: homepage.
-- `app/[...slug]/page.tsx`: 16 other core marketing routes, three product stories, three insights and three policy pages, generated at build time.
-- `app/approved.json`: about/service copy extracted from the supplied brief.
-- `app/data.ts`: products, service links, editorial articles, product stories and canonical site URL.
-- `app/components.tsx`: reusable server-rendered sections, footer, metadata and structured data.
-- `app/interactive.tsx`: responsive navigation, product filters/search and contact form.
-- `app/globals.css`: original visual foundation and responsive multi-page styles.
-- `app/sitemap.ts`, `app/robots.ts`: static search-discovery files.
-- `public/images/`: supplied corporate-profile artwork and logo.
-- `public/wesoul-profile.pdf`: original downloadable corporate profile.
+`public/loader.mp4` plays muted and inline in a fullscreen white curtain on internal route changes and browser history navigation. Next.js client-side routing and Link prefetching remain in place. The video loops while loading, with a 1.6-second minimum display and short fade. Escape/Skip dismiss the curtain; a 12-second failsafe prevents trapping the visitor. Reduced-motion settings and video playback errors use a static WESOUL fallback. Same-route anchors, downloads, email, telephone, external links and modifier-key clicks keep their normal behavior.
 
-## Contact form behavior
+## Environment and launch configuration
 
-As requested, a valid submission logs `{ name, company, email, phone, service, message }` with the label `WESOUL enquiry form submission` to the browser console. A centered, dismissible toast appears for six seconds. No email, API request or database write occurs. Required fields and email format are validated. The form resets after a valid submission.
+Copy `.env.example` to `.env.local` if customization is needed. There are no private service credentials in this version.
 
-Product and service enquiry links prefill the message. The interface explicitly describes the form as a preview so visitors are not told a real enquiry has been delivered.
+- `NEXT_PUBLIC_SITE_URL`: canonical origin, defaults to `https://www.wesoul.net`; only the www or bare HTTPS WESOUL origin is accepted.
+- `SITE_ENV=preview`: safe default, noindex metadata/headers, disallow robots and empty sitemap.
+- `SITE_ENV=production`: only enable on the approved production build. Development and Vercel preview deployments stay unindexed. Rebuild after changing these values.
+- `ENABLE_HSTS=true`: enable only after production HTTPS and domain cutover are verified.
 
-## Content and launch inputs
+Next.js config prepares a 301 from the alternate WESOUL hostname to the canonical origin. Actual DNS, certificates and HTTP-to-HTTPS enforcement remain hosting configuration tasks and have not been changed or verified. Next.js sets image/cache response behavior; unversioned public assets retain revalidation semantics.
 
-Product illustrations are not live UI screenshots. Work pages describe product approaches and intended value, not verified client outcomes. See `IMPLEMENTATION-NOTES.md` for source boundaries, verification results and the assets/content to confirm before a public launch.
+The CSP allows inline Next.js hydration scripts and inline styles; it is not a nonce-based strict CSP. Development also allows eval and WebSocket connections for Fast Refresh. No analytics or third-party embeds are enabled.
+
+## Content and assets
+
+- `app/approved.json`: explicit source headings and approved service/about copy.
+- `app/components.tsx`: server-rendered product cards, related content, footer, SEO metadata and schema.
+- `app/interactive.tsx`: mobile navigation; `app/contact-form.tsx`: console-only form.
+- `app/policies.tsx`: notices matching the current implementation.
+- `public/social/`: 26 distinct 1200×630 social cards.
+- `public/wesoul-profile.pdf`: compressed 7.1 MB web download; all 16 pages retained.
+- `assets/print/wesoul-profile-master.pdf`: original 45.7 MB file, outside public assets and Git-ignored. Preserve this local file separately when transferring the project.
+
+See `V1-HANDOVER.md` for verification and remaining launch dependencies.

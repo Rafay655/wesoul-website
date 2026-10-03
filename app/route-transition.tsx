@@ -65,10 +65,10 @@ export function RouteTransitionProvider({ children }: { children: ReactNode }) {
     route.current = key;
     if (!active.current) return;
     clearTimers();
-    const remaining = Math.max(0, (reduced.current ? 350 : 700) - (performance.now() - started.current));
+    const remaining = Math.max(0, (reduced.current ? 200 : 1600) - (performance.now() - started.current));
     timers.current.push(setTimeout(() => {
       setScene(value => ({ ...value, phase: 'reveal' }));
-      timers.current.push(setTimeout(dismiss, reduced.current ? 120 : 520));
+      timers.current.push(setTimeout(dismiss, reduced.current ? 120 : 280));
     }, remaining));
   }, [clearTimers, dismiss]);
 
@@ -110,17 +110,23 @@ export function RouteTransitionProvider({ children }: { children: ReactNode }) {
     <div className="site-shell" inert={visible || undefined}>{children}</div>
     <div className="sr-only" role="status" aria-live="polite" aria-atomic="true">{visible ? `Opening ${scene.label}` : ''}</div>
     {visible && <div key={scene.id} className={`route-curtain route-curtain--${scene.phase}`}>
-      <div className="route-curtain-grid" aria-hidden="true"/>
-      <div className="route-curtain-top"><span className="route-wordmark">WE<span>SOUL</span><sup>✳</sup></span><span className="route-edition">IDEAS INTO WHAT’S NEXT</span></div>
-      <div className="route-curtain-center" aria-hidden="true">
-        <div className="route-orbit"><span className="route-orbit-ring"/><span className="route-orbit-ring route-orbit-ring--inner"/><span className="route-orbit-dot"/><svg className="route-soul-mark" viewBox="0 0 100 100" fill="none"><path d="M50 8V92M8 50H92M20.3 20.3L79.7 79.7M20.3 79.7L79.7 20.3" stroke="currentColor" strokeWidth="14"/><circle cx="50" cy="50" r="13" fill="#181918"/></svg></div>
-        <div className="route-manifesto">Give ideas a <em>Soul.</em></div>
-        <div className="route-destination"><span>EXPLORING</span><strong>{scene.label}</strong></div>
-      </div>
-      <div className="route-curtain-bottom"><span>THINK. BUILD. EVOLVE.</span><span className="route-loading-label"><i/> A NEW PERSPECTIVE</span><button onClick={dismiss}>Skip transition <span aria-hidden="true">↗</span></button></div>
-      <div className="route-loading-track" aria-hidden="true"><span/></div>
+      <LoaderVideo reducedMotion={reduced.current}/>
+      <div className="route-curtain-bottom"><span>Opening {scene.label}</span><button onClick={dismiss}>Skip transition <span aria-hidden="true">↗</span></button></div>
     </div>}
   </TransitionContext.Provider>;
+}
+
+function LoaderVideo({ reducedMotion }: { reducedMotion: boolean }) {
+  const video = useRef<HTMLVideoElement>(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    const element = video.current;
+    if (!element || reducedMotion) return;
+    element.play().catch(() => setFailed(true));
+  }, [reducedMotion]);
+  return <div className="route-video-stage" aria-hidden="true">{reducedMotion || failed
+    ? <div className="route-video-fallback">WE<span>SOUL</span><small>Opening your next page</small></div>
+    : <video ref={video} className="route-loader-video" src="/loader.mp4" autoPlay muted playsInline loop preload="auto" disablePictureInPicture onError={()=>setFailed(true)}/>}</div>;
 }
 
 function RouteCommit({ onCommit }: { onCommit: (key: string) => void }) {

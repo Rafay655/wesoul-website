@@ -1,3 +1,5 @@
+Latest status: see V1-HANDOVER.md and README.md. The notes below describe the earlier brief implementation; the V1 handover supersedes its build and asset details.
+
 # WESOUL developer brief v2 implementation
 
 ## Delivered

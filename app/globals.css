@@ -3010,3 +3010,18 @@ button:disabled {
     display: none;
   }
 }
+
+/* V1 readability and keyboard/touch refinements. */
+.asset-pending{font-size:13px;line-height:1.6;color:#5d5d57;margin-top:14px}
+.product .product-headline{font-size:18px;font-weight:600;color:var(--ink);margin:12px 0}
+.contact-info>a{min-height:44px;display:flex;align-items:center;gap:12px}
+.menu-toggle,.center-toast button{min-width:44px;min-height:44px}
+.footer-bottom a,.utility-links a{display:inline-flex;align-items:center;min-height:44px}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #b93810;outline-offset:3px}
+.button.orange,.nav-cta{color:#181818}
+.eyebrow,.text-link,.card-link{color:#a9340d}
+.contact .eyebrow{color:#181818}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+.nav .nav-cta:hover{color:#181818}
+.expertise .eyebrow,.service-hub .eyebrow,.expertise .text-link,.service-hub .text-link{color:#ff906b}
