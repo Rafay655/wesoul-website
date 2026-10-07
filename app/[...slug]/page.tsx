@@ -1,3 +1,5 @@
+import { ProductWorkflow } from '../product-workflow';
+import { QuestionsToActions } from '../questions-to-actions';
 import { SoftwareVisual, AgentVisual, ModernizationVisual, TeamVisual, EvolutionVisual, InsightCover } from "../service-visuals";
 import { PolicyPage } from "../policies";
 import Link from "../route-transition";
@@ -418,7 +420,7 @@ function StandardPage({ path }: { path: string }) {
       ) : (
         page.sections
           .slice(1, -1)
-          .map((section, i) => path === "about" && section.label === "Evolution" ? <EvolutionVisual key={section.label}/> : path === "ai-engineering" && section.label === "AI + Existing Systems" ? <AgentVisual key={section.label}/> : path === "software-modernization" && section.label === "Architecture View" ? <ModernizationVisual key={section.label}/> : (
+          .map((section, i) => path === "ai-engineering" && section.label === "From Questions to Actions" ? <QuestionsToActions key={section.label}/> : path === "about" && section.label === "Evolution" ? <EvolutionVisual key={section.label}/> : path === "ai-engineering" && section.label === "AI + Existing Systems" ? <AgentVisual key={section.label}/> : path === "software-modernization" && section.label === "Architecture View" ? <ModernizationVisual key={section.label}/> : (
             <ApprovedSection
               key={section.label}
               section={section}
@@ -549,7 +551,7 @@ function ProductPage({ product: p }: { product: (typeof products)[number] }) {
         </div>
         <figure>
           <Image
-            src={"/images/" + p.slug + ".webp"}
+            src={"/images/" + p.slug + ".png"}
             width={1000}
             height={1000}
             fetchPriority="high" sizes="(max-width: 760px) 88vw, 44vw"
@@ -597,18 +599,7 @@ function ProductPage({ product: p }: { product: (typeof products)[number] }) {
           ))}
         </div>
       </section>
-      <section className="section">
-        <p className="eyebrow">
-          03 /{" "}
-          {p.slug === "packverity" ? "EVALUATION FRAMEWORK" : "THE WORKFLOW"}
-        </p>
-        <h2>
-          {p.slug === "packverity"
-            ? "Define the verification you need."
-            : "See how the work connects."}
-        </h2>
-        <Flow steps={p.workflow} label={p.name + " workflow"} />
-      </section>
+      <ProductWorkflow name={p.name} steps={p.workflow} evaluation={p.slug === "packverity"}/>
       <FAQ items={p.faq} />
       <RelatedContent product={p.slug} />
       <section className="product-capability-link">

@@ -1,21 +1,248 @@
-import Link from './route-transition';
-import { ArrowUpRight } from 'lucide-react';
-import { buildSteps } from './data';
-import { CTA, Flow, JsonLd, metadataFor, ServiceCards, WorkCards } from './components';
-import { ProductGrid } from './components';
-import Image from 'next/image';
-import { siteUrl } from './site-config';
+import { PracticalIntelligence } from "./practical-intelligence";
+import Link from "./route-transition";
+import { ArrowUpRight } from "lucide-react";
+import { BuildProcess } from "./build-process";
+import {
+  CTA,
+  JsonLd,
+  metadataFor,
+  ServiceCards,
+  WorkCards,
+} from "./components";
+import { ProductGrid } from "./components";
+import Image from "next/image";
+import { siteUrl } from "./site-config";
 
-export const metadata=metadataFor('WESOUL | Software, Product Engineering & AI Solutions','WESOUL designs and builds custom software, web and mobile applications, AI agents, integrations and modern digital systems around real business problems.');
-export default function Home(){return <>
-  <section className="hero" id="home"><div className="hero-copy"><p className="eyebrow">SOFTWARE · PRODUCT ENGINEERING · AI</p><h1>Give ideas<br/>a <span className="soul">Soul<span className="period">.</span></span></h1><p className="hero-positioning">Software, products and practical AI<br/>built around real business problems.</p><p className="hero-description">WESOUL designs and engineers custom software, web and mobile applications, AI-powered systems, intelligent agents and connected digital experiences.</p><div className="hero-actions"><Link className="button orange" href="/contact">Start a Conversation <ArrowUpRight size={17}/></Link><Link className="text-link" href="/products">Explore What We Build</Link></div><div className="hero-note"><span className="small-star">✳</span><p>From the first idea to production —<br/><strong>and from legacy systems to what comes next.</strong></p></div></div><div className="hero-art"><Image src="/images/hero.webp" width={1000} height={1300} fetchPriority="high" sizes="(max-width: 760px) 88vw, 44vw" alt="An orange pathway rises through architectural forms"/><span className="art-label">THINK. BUILD. EVOLVE.</span><span className="art-index">W / 01</span></div><div className="hero-bottom"><span>Business first. Product minded. Built with purpose.</span><span>SCROLL TO EXPLORE <span className="scroll-line"/></span></div></section>
-  <section className="section business-first"><div className="section-label">01 / BUSINESS BEFORE TECHNOLOGY</div><div><h2>Technology earns its place<br/><span>when the business feels<br/>the difference.</span></h2><div className="about-copy"><p>Businesses rarely ask for more technology. They ask for approvals to stop getting lost. Information to stop being entered repeatedly. Customers to get answers faster. Teams to work from the same information.</p><p>Sometimes the answer is something new. Sometimes it is connecting what already exists. Sometimes it is modernizing what has fallen behind. And sometimes AI can remove the work sitting between a request and an outcome.</p></div></div><div className="business-pillars">{[{title:'Build',text:'Create what the business does not yet have.'},{title:'Integrate',text:'Make existing systems work together.'},{title:'Evolve',text:'Take useful technology where the business needs to go next.'}].map((p,i)=><div key={p.title}><span>0{i+1}</span><h3>{p.title}<span>.</span></h3><p>{p.text}</p></div>)}</div></section>
-  <section className="section expertise"><div className="section-heading"><div><p className="eyebrow">02 / WHAT WE DO</p><h2>Start with the problem.<br/><span>Build what matters.</span></h2></div><Link className="text-link" href="/services">Explore our services ↗</Link></div><ServiceCards/></section>
-  <section className="section ai-feature"><div className="section-heading"><div><p className="eyebrow">03 / PRACTICAL INTELLIGENCE</p><h2>AI is useful when it can<br/><span>actually do something.</span></h2></div><span className="ai-symbol" aria-hidden="true">✳</span></div><p className="section-lead">We design AI systems that go beyond answering questions. They can understand requests, work with organizational knowledge, interact with permitted systems and help complete real business processes.</p><Flow steps={['Understand','Retrieve','Use systems','Take action','Deliver outcome']} label="How practical AI supports a business outcome"/><Link href="/ai-engineering" className="button dark">Explore AI at WESOUL<ArrowUpRight size={17}/></Link></section>
-  <section className="work section"><div className="section-heading"><div><p className="eyebrow">04 / OUR PRODUCTS</p><h2>We build<br/><span>products too.</span></h2></div><p>Building our own products keeps us close to the realities<br className="desktop-break"/> of software ownership — users, releases, reliability,<br className="desktop-break"/> adoption, support and continuous improvement.</p></div><ProductGrid/><div className="section-bottom-link"><Link className="text-link" href="/products">Explore WESOUL Products ↗</Link></div></section>
-  <section className="statement"><div className="statement-track" aria-hidden="true">BUILD WITH PURPOSE. <span>EVOLVE WITH SOUL.</span> BUILD WITH PURPOSE. <span>EVOLVE WITH SOUL.</span></div><span className="sr-only">Build with purpose. Evolve with soul.</span></section>
-  <section className="section"><p className="eyebrow">05 / HOW WESOUL BUILDS</p><h2>Good software starts<br/><span>before the first line of code.</span></h2><Flow steps={buildSteps} label="WESOUL product development process"/><p className="section-lead">Business understanding. Product thinking. Engineering discipline. Human ownership.</p></section>
-  <section className="section proof-section"><div className="section-heading"><div><p className="eyebrow">06 / SELECTED WORK</p><h2>Real businesses.<br/><span>Real operational problems.</span></h2></div><p>Three product stories, grounded in the work<br/>they are designed to support.</p></div><WorkCards/><div className="section-bottom-link"><Link className="text-link" href="/work">Explore our work ↗</Link></div></section>
-  <section className="partnership section"><div className="partnership-image"><Image src="/images/partnership.webp" sizes="(max-width: 760px) 88vw, 40vw" loading="lazy" width={900} height={1200} alt="WESOUL illustration of collaboration and connected ideas"/></div><div className="partnership-copy"><p className="eyebrow">07 / WORKING TOGETHER</p><h2>More than software.<br/><span>A partner for<br/>what’s next.</span></h2><p>Technology creates value when people can use it, trust it and grow with it. From implementation to ongoing improvement, we work with clients beyond the initial build when the relationship requires it.</p><Link className="text-link" href="/about">Get to know WESOUL ↗</Link></div></section>
-  <CTA/><JsonLd data={{'@context':'https://schema.org','@type':'WebPage',name:'WESOUL | Software, Product Engineering & AI Solutions',url:siteUrl+'/',isPartOf:{'@id':siteUrl+'/#website'}}}/>
-</>;}
+export const metadata = metadataFor(
+  "WESOUL | Software, Product Engineering & AI Solutions",
+  "WESOUL designs and builds custom software, web and mobile applications, AI agents, integrations and modern digital systems around real business problems.",
+);
+export default function Home() {
+  return (
+    <>
+      <section className="hero" id="home">
+        <div className="hero-copy">
+          <p className="eyebrow">SOFTWARE · PRODUCT ENGINEERING · AI</p>
+          <h1>
+            Give ideas
+            <br />a{" "}
+            <span className="soul">
+              Soul<span className="period">.</span>
+            </span>
+          </h1>
+          <p className="hero-positioning">
+            Software, products and practical AI
+            <br />
+            built around real business problems.
+          </p>
+          <p className="hero-description">
+            WESOUL designs and engineers custom software, web and mobile
+            applications, AI-powered systems, intelligent agents and connected
+            digital experiences.
+          </p>
+          <div className="hero-actions">
+            <Link className="button orange" href="/contact">
+              Start a Conversation <ArrowUpRight size={17} />
+            </Link>
+            <Link className="text-link" href="/products">
+              Explore What We Build
+            </Link>
+          </div>
+          <div className="hero-note">
+            <span className="small-star">✳</span>
+            <p>
+              From the first idea to production —<br />
+              <strong>and from legacy systems to what comes next.</strong>
+            </p>
+          </div>
+        </div>
+        <div className="hero-art">
+          <Image
+            src="/images/hero.png"
+            width={1000}
+            height={1300}
+            fetchPriority="high"
+            sizes="(max-width: 760px) 88vw, 44vw"
+            alt="An orange pathway rises through architectural forms"
+          />
+          <span className="art-label">THINK. BUILD. EVOLVE.</span>
+          <span className="art-index">W / 01</span>
+        </div>
+        <div className="hero-bottom">
+          <span>Business first. Product minded. Built with purpose.</span>
+          <span>
+            SCROLL TO EXPLORE <span className="scroll-line" />
+          </span>
+        </div>
+      </section>
+      <section className="section business-first">
+        <div className="section-label">01 / BUSINESS BEFORE TECHNOLOGY</div>
+        <div>
+          <h2>
+            Technology earns its place
+            <br />
+            <span>
+              when the business feels
+              <br />
+              the difference.
+            </span>
+          </h2>
+          <div className="about-copy">
+            <p>
+              Businesses rarely ask for more technology. They ask for approvals
+              to stop getting lost. Information to stop being entered
+              repeatedly. Customers to get answers faster. Teams to work from
+              the same information.
+            </p>
+            <p>
+              Sometimes the answer is something new. Sometimes it is connecting
+              what already exists. Sometimes it is modernizing what has fallen
+              behind. And sometimes AI can remove the work sitting between a
+              request and an outcome.
+            </p>
+          </div>
+        </div>
+        <div className="business-pillars">
+          {[
+            {
+              title: "Build",
+              text: "Create what the business does not yet have.",
+            },
+            {
+              title: "Integrate",
+              text: "Make existing systems work together.",
+            },
+            {
+              title: "Evolve",
+              text: "Take useful technology where the business needs to go next.",
+            },
+          ].map((p, i) => (
+            <div key={p.title}>
+              <span>0{i + 1}</span>
+              <h3>
+                {p.title}
+                <span>.</span>
+              </h3>
+              <p>{p.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="section expertise">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">02 / WHAT WE DO</p>
+            <h2>
+              Start with the problem.
+              <br />
+              <span>Build what matters.</span>
+            </h2>
+          </div>
+          <Link className="text-link" href="/services">
+            Explore our services ↗
+          </Link>
+        </div>
+        <ServiceCards />
+      </section>
+      <PracticalIntelligence />
+      <section className="work section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">04 / OUR PRODUCTS</p>
+            <h2>
+              We build
+              <br />
+              <span>products too.</span>
+            </h2>
+          </div>
+          <p>
+            Building our own products keeps us close to the realities
+            <br className="desktop-break" /> of software ownership — users,
+            releases, reliability,
+            <br className="desktop-break" /> adoption, support and continuous
+            improvement.
+          </p>
+        </div>
+        <ProductGrid />
+        <div className="section-bottom-link">
+          <Link className="text-link" href="/products">
+            Explore WESOUL Products ↗
+          </Link>
+        </div>
+      </section>
+      <section className="statement">
+        <div className="statement-track" aria-hidden="true">
+          BUILD WITH PURPOSE. <span>EVOLVE WITH SOUL.</span> BUILD WITH PURPOSE.{" "}
+          <span>EVOLVE WITH SOUL.</span>
+        </div>
+        <span className="sr-only">Build with purpose. Evolve with soul.</span>
+      </section>
+      <BuildProcess />
+      <section className="section proof-section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">06 / SELECTED WORK</p>
+            <h2>
+              Real businesses.
+              <br />
+              <span>Real operational problems.</span>
+            </h2>
+          </div>
+          <p>
+            Three product stories, grounded in the work
+            <br />
+            they are designed to support.
+          </p>
+        </div>
+        <WorkCards />
+        <div className="section-bottom-link">
+          <Link className="text-link" href="/work">
+            Explore our work ↗
+          </Link>
+        </div>
+      </section>
+      <section className="partnership section">
+        <div className="partnership-image">
+          <Image
+            src="/images/team.png"
+            sizes="(max-width: 760px) 88vw, 40vw"
+            loading="lazy"
+            width={900}
+            height={1200}
+            alt="WESOUL illustration of collaboration and connected ideas"
+          />
+        </div>
+        <div className="partnership-copy">
+          <p className="eyebrow">07 / WORKING TOGETHER</p>
+          <h2>
+            More than software.
+            <br />
+            <span>
+              A partner for
+              <br />
+              what’s next.
+            </span>
+          </h2>
+          <p>
+            Technology creates value when people can use it, trust it and grow
+            with it. From implementation to ongoing improvement, we work with
+            clients beyond the initial build when the relationship requires it.
+          </p>
+          <Link className="text-link" href="/about">
+            Get to know WESOUL ↗
+          </Link>
+        </div>
+      </section>
+      <CTA />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "WESOUL | Software, Product Engineering & AI Solutions",
+          url: siteUrl + "/",
+          isPartOf: { "@id": siteUrl + "/#website" },
+        }}
+      />
+    </>
+  );
+}

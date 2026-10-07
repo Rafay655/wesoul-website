@@ -1,0 +1,15 @@
+/* Preserve the owner's link order; make navigation easier to read and follow. */
+.header .nav{font-size:15px;gap:24px}
+.header .nav>a:not(.nav-cta){position:relative;display:inline-flex;align-items:center;min-height:44px;padding:10px 0;white-space:nowrap;font-weight:500;letter-spacing:-.15px;transition:color 220ms ease,transform 220ms ease}
+.header .nav>a:not(.nav-cta)::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:2px;background:#ba421c;transform:scaleX(0);transform-origin:right;transition:transform 260ms cubic-bezier(.22,.61,.36,1)}
+.header .nav>a:not(.nav-cta):is(:hover,:focus-visible){color:#ac3915;transform:translateY(-1px)}
+.header .nav>a:not(.nav-cta):is(:hover,:focus-visible,[aria-current=page])::after{transform:scaleX(1);transform-origin:left}
+.header .nav>a[aria-current=page]:not(.nav-cta){color:#ac3915}
+.header .nav .nav-cta{font-size:14px;min-height:46px;white-space:nowrap;transition:background-color 230ms ease,border-color 230ms ease,color 230ms ease,box-shadow 230ms ease}
+.header .nav .nav-cta svg{transition:transform 230ms cubic-bezier(.22,.61,.36,1)}
+.header .nav .nav-cta:is(:hover,:focus-visible){background:#ef5429;border-color:#ef5429;color:#181818;box-shadow:0 5px 15px #9c3a1515}
+.header .nav .nav-cta:is(:hover,:focus-visible) svg{transform:translate(2px,-2px)}
+@media(min-width:1400px){.header .nav{font-size:16px;gap:29px}.header .nav .nav-cta{font-size:15px}}
+@media(min-width:1001px) and (max-width:1200px){.header .nav{gap:15px;font-size:14px}.header .nav .nav-cta{padding:12px 14px;font-size:13px}.header{gap:18px}}
+@media(max-width:1000px){.header .nav{gap:0}.header .nav>a:not(.nav-cta){font-size:18px;min-height:52px;padding:14px 0}.header .nav>a:not(.nav-cta)::after{right:auto;width:30px;bottom:8px}.header .nav .nav-cta{font-size:16px;margin-top:18px}}
+@media(prefers-reduced-motion:reduce){.header .nav>a,.header .nav>a::after,.header .nav .nav-cta svg{transition:none!important}.header .nav>a:not(.nav-cta):is(:hover,:focus-visible),.header .nav .nav-cta:is(:hover,:focus-visible) svg{transform:none}}
