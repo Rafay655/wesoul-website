@@ -6,7 +6,7 @@ Next.js App Router + TypeScript. The approved visual design and page hierarchy a
 
 Run `npm run dev` from `D:\wesoul\website` and open the localhost URL printed by Next.js. The existing pnpm lockfile is the dependency source of truth; use `pnpm install --frozen-lockfile` when installing dependencies.
 
-`npm run build` validates and builds the site. `npm start` runs the built Next.js application locally. The site now uses the Next.js runtime for responsive image optimization, security headers and redirects. **Old files in `out/` are stale and must not be used.** No deployment has been performed.
+`npm run build` validates the site and generates a fresh `out/` folder with static HTML, CSS, JavaScript and public assets. Upload the entire contents of `out/` to the static host at the domain root, including `_next/`. Configure clean URLs so `/about` serves `/about.html` and missing routes use `404.html`. Client-side routing, the preloader and the console-only contact form remain available. Images are served directly without a Next.js optimization server. `npm start` (Next.js server mode) does not serve this export; use a static HTTP server for preview. No deployment has been performed.
 
 ## Contact behavior
 
@@ -27,7 +27,7 @@ Copy `.env.example` to `.env.local` if customization is needed. There are no pri
 - `SITE_ENV=production`: only enable on the approved production build. Development and Vercel preview deployments stay unindexed. Rebuild after changing these values.
 - `ENABLE_HSTS=true`: enable only after production HTTPS and domain cutover are verified.
 
-Next.js config prepares a 301 from the alternate WESOUL hostname to the canonical origin. Actual DNS, certificates and HTTP-to-HTTPS enforcement remain hosting configuration tasks and have not been changed or verified. Next.js sets image/cache response behavior; unversioned public assets retain revalidation semantics.
+Static exports cannot apply the response headers or hostname redirects defined in Next.js config. Configure security headers, cache headers, HTTPS and the alternate-hostname 301 on the static hosting provider. The existing Next.js rules are retained for development. DNS, certificates and hosting settings have not been changed.
 
 The CSP allows inline Next.js hydration scripts and inline styles; it is not a nonce-based strict CSP. Development also allows eval and WebSocket connections for Fast Refresh. No analytics or third-party embeds are enabled.
 

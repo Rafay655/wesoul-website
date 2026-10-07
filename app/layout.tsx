@@ -3,6 +3,7 @@ import { Header } from './interactive';
 import { Footer, JsonLd } from './components';
 import { siteUrl } from './data';
 import './globals.css';
+import './navbar-polish.css';
 import './service-visuals.css';
 import { RouteTransitionProvider } from './route-transition';
 export const metadata:Metadata={metadataBase:new URL(siteUrl),icons:{icon:'/images/mark.png'}};

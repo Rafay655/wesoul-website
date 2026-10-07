@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Check, GitBranch, LockKeyhole, Plus } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Check, Plus } from 'lucide-react';
 import './service-visuals.css';
 
 /** Editorial diagrams are server-rendered and contain no invented product claims. */
@@ -29,20 +29,7 @@ export function SoftwareVisual() {
   </section>;
 }
 
-export function AgentVisual() {
-  return <section className="section visual-section agent-section" aria-labelledby="agent-visual-title">
-    <div className="visual-heading"><p className="eyebrow">AI + EXISTING SYSTEMS</p><h2 id="agent-visual-title">Intelligence with<br/><span>clear boundaries.</span></h2><p>A person sets the goal. An agent works with permitted knowledge and tools. Decisions that need human approval stay with people.</p></div>
-    <figure className="agent-diagram">
-      <div className="agent-person"><span className="diagram-index">01 / HUMAN</span><h3>A request with a purpose</h3><p>Employee · Customer · Manager</p></div>
-      <ArrowDown className="diagram-arrow" aria-hidden="true"/>
-      <div className="permission-boundary"><div className="boundary-label"><LockKeyhole size={15}/><span>PERMITTED DATA · SCOPED TOOLS · RECORDED ACTIONS</span></div><div className="agent-core"><span className="agent-star" aria-hidden="true">✳</span><div><span className="diagram-index">02 / WESOUL AI LAYER</span><h3>Understand. Plan. Use tools.</h3></div></div><div className="agent-resources"><div><span>03 / KNOWLEDGE</span><h4>Find the context</h4><p>Documents, policies and permitted records</p></div><div><span>04 / TOOLS & APIs</span><h4>Perform a defined step</h4><p>Access only the actions the task requires</p></div><div><span>05 / BUSINESS SYSTEMS</span><h4>Work where the data lives</h4><p>ERP · CRM · HRMS · DMS · Databases</p></div></div></div>
-      <ArrowDown className="diagram-arrow" aria-hidden="true"/>
-      <div className="agent-decision"><GitBranch size={24} aria-hidden="true"/><div><span className="diagram-index">06 / APPROVAL GATE</span><h3>Review before a consequential action</h3><p>Approve to proceed. Revise or stop when needed.</p></div></div>
-      <ArrowDown className="diagram-arrow" aria-hidden="true"/><div className="agent-outcome"><Check size={22} aria-hidden="true"/><div><span className="diagram-index">07 / OUTCOME</span><h3>A completed action. A traceable result.</h3></div></div>
-      <figcaption>Illustrative architecture. Permissions, review gates and connected systems are defined for each implementation.</figcaption>
-    </figure>
-  </section>;
-}
+export { IntelligenceBoundaries as AgentVisual } from './intelligence-boundaries';
 
 export function ModernizationVisual() {
   return <section className="section visual-section modernization-section" aria-labelledby="modernization-visual-title">
