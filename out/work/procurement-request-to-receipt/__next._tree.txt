@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/0bn2rg46k9580.css","style"]
-:HL["/_next/static/chunks/38008umilfc6m.css","style"]
-:HL["/images/reqzly.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"slug","param":{"type":"c","key":"work/procurement-request-to-receipt","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"RXUm5MGxHtBriTfTrweMP"}
+:HL["/_next/static/chunks/3fljz1a9r0de_.css","style"]
+:HL["/_next/static/chunks/3yfb09i847zy3.css","style"]
+:HL["/_next/static/chunks/3zlwp8c2yq3lo.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"slug","param":{"type":"c","key":"work/procurement-request-to-receipt","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"J3LlhOtEts2V7tBEwMSM0"}
